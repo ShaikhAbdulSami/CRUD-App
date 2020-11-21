@@ -49,7 +49,7 @@ export default function Home(){
     setUpdateData(false);
   };
   useEffect(()=>{
-    fetch('/.netlify/functions/read',{
+    fetch(`/.netlify/functions/read`,{
       method: 'get'
     })
     .then(response => response.json())
