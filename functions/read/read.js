@@ -9,8 +9,8 @@ exports.handler = async (event,context) => {
         
         var result = await client.query(
           q.Map(
-            q.Paginate(q.Match(q.Index('list_title'))),
-            q.Lambda(["ref"], q.Get(q.Var("ref")))
+            q.Paginate(q.Match(q.Index('myList'))),
+            q.Lambda("ref", q.Get(q.Var("ref")))
           )
       
         )

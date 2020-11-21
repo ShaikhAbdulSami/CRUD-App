@@ -49,7 +49,9 @@ export default function Home(){
     setUpdateData(false);
   };
   useEffect(()=>{
-    fetch(`/.netlify/functions/read`)
+    fetch('/.netlify/functions/read',{
+      method: 'get'
+    })
     .then(response => response.json())
     .then(data => {
       setData(data.data)
@@ -58,9 +60,8 @@ export default function Home(){
     .catch(e =>{
       console.log(e)
     })
-      
-      
   },[fetchdata])
+
   const updatemessage = (id:string) => {
     var updateData = mydata.find(messa=>messa.ref["@ref"].id === id)
     setUpdatingData(updateData)
