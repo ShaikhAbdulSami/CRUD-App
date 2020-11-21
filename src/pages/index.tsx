@@ -37,7 +37,7 @@ export default function Home(){
       content:string,
     }
   }
-  const [mydata, setData] = useState<null | mydata[]>();
+  const [mydata, setData] = useState<null | mydata[]>(null);
   const [fetchdata, setFetchdata] = useState(false);
   const [updatingData, setUpdatingData] = useState(undefined)
   const [updateData, setUpdateData] = useState(false)
