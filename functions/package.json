@@ -9,6 +9,7 @@
   "author": "Shaikh Abdul Sami",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "faunadb": "^4.0.0"
   }
 }
